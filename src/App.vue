@@ -40,6 +40,14 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div class="col-sm-9">
+        <router-view></router-view>
+      </div>
+      <div class="col-sm-3">
+
+      </div>
+    </div>
   </div>
 </template>
 

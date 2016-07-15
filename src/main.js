@@ -33,7 +33,7 @@ router.map({
 
 // Any invalid route will redirect to home
 router.redirect({
-  '*': '/hello'
+  '*': '/home'
 })
 
 router.start(App, '#app')
