@@ -1,14 +1,14 @@
 <template>
  <div class="container">
-   <div class="row">
+    <div class="row">
       <div class="col-md-8">
-        <div class="header">
+        <div class="col-md-12">
           <a href="/?tab=all" class="topic-tab current-tab">全部</a>
           <a href="/?tab=good" class="topic-tab ">精华</a>
           <a href="/?tab=share" class="topic-tab ">分享</a>
           <a href="/?tab=ask" class="topic-tab ">问答</a>
           <a href="/?tab=job" class="topic-tab ">招聘</a>
-        </div>    
+        </div>
         <topic-list class="col-md-12"></topic-list>
         <div class="pagination" current_page="1" class="col-md-12">
           <ul>
@@ -29,13 +29,12 @@
           <ad class="col-md-12"></ad>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <footer class="col-md-12"></footer>
-    </div>
+    </div>        
   </div>
-
-
+    <!-- <div class="row"> -->
+  <footer class="col-md-12 col-lg-12"></footer>
+    <!-- </div> -->
+</div>
 </template>
 
 <script>
@@ -66,8 +65,8 @@
 </script>
 
 <style type="text/css" scoped>
-h1{
-	/*background: url('../assets/logo.png');*/
-}
+/*.container{
+	width:90%!important;
+}*/
 </style>
 

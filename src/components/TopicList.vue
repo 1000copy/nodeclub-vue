@@ -35,7 +35,7 @@
     data () {
       return {
         items: [
-          {message: 'msg1'},
+          {message: '中国最大的JavaScript开发者大会JSConf China 2016即宁JS 售票啦！'},
           {message: 'msg2'}]
       }
     }
