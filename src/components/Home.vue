@@ -1,8 +1,8 @@
 <template>
- <div class="container">
+ <div class="container" id="content">
     <div class="row">
       <div class="col-md-8">
-        <div class="col-md-12">
+        <div class="col-md-12 topic-header">
           <a href="/?tab=all" class="topic-tab current-tab">全部</a>
           <a href="/?tab=good" class="topic-tab ">精华</a>
           <a href="/?tab=share" class="topic-tab ">分享</a>
@@ -65,8 +65,13 @@
 </script>
 
 <style type="text/css" scoped>
-/*.container{
-	width:90%!important;
-}*/
+.topic-header {
+    padding: 10px;
+    background-color: #f6f6f6;
+    border-radius: 3px 3px 0 0;
+}
+#content{
+  margin: 15px auto
+}
 </style>
 

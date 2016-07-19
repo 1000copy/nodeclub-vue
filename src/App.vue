@@ -94,6 +94,10 @@
 .navbar {
     top: 0px;
     width: 100%;
+    border-radius: 0px!important;
+}
+.navbar {
+
 }
 
 </style>
