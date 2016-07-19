@@ -41,21 +41,25 @@
       </div>
     </div>
     <div class="container">
-      <div class="col-sm-9">
+      <div class="col-md-12">
         <router-view></router-view>
-      </div>
-      <div class="col-sm-3">
-
-      </div>
+    </div>
+    <div class="container">
+        <footer_>
+        </footer_>
     </div>
   </div>
 </template>
 
 <script>
   import Sidebar from './components/Sidebar.vue'
-
+  import Footer from './components/Footer.vue'
+  // import Ad from './components/Ad.vue'
   export default {
-    components: { 'sidebar': Sidebar },
+    components: {
+      'sidebar': Sidebar,
+      'footer_': Footer
+    },
     data () {
       return {
         // Start with the same value as our
