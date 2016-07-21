@@ -18,7 +18,7 @@ router.map({
   '/hello': {
     component: Hello
   },
-  '/home': {
+  '/home/:tab': {
     component: Home
   },
   '/time-entries': {
