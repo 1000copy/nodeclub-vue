@@ -24,13 +24,25 @@
           </a>
         </div>
       </div>
+      <div class="pagination" current_page="1" class="col-md-12">
+          <ul>
+            <li class="disabled"><a>«</a></li>
+            <li class="disabled active"><a>1</a></li>
+            <li><a href="/?tab=all&amp;page=2">2</a></li>
+            <li><a href="/?tab=all&amp;page=3">3</a></li>
+            <li><a href="/?tab=all&amp;page=4">4</a></li>
+            <li><a href="/?tab=all&amp;page=5">5</a></li>
+            <li><a>...</a></li>
+            <li><a href="/?tab=all&amp;page=455">»</a></li>
+          </ul>
+      </div>
     </div>
 </template>
 <style type="text/css" scoped>
 #topic-list{
-  background-color: #eee;
-      padding-right: 0px;
-    padding-left: 0px;
+  background: #fff;
+  padding-right: 0px;
+  padding-left: 0px;
 }
 #topic-list .cell {
     padding-right: 10px;
@@ -47,8 +59,16 @@
     data () {
       return {
         items: [
-          {message: '中国最大的JavaScript开发者大会JSConf China 2016即宁JS 售票啦！'},
-          {message: 'msg2'}]
+          {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
+          {message: 'msg2'},
+          {message: 'msg2'},
+          {message: 'msg2'},
+          {message: 'msg2'},
+          {message: 'msg2'},
+          {message: 'msg2'},
+          {message: 'msg2'},
+          {message: 'msg2'}
+        ]
       }
     }
   }

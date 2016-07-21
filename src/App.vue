@@ -1,5 +1,5 @@
 <template>
- <div id="wrapper">
+ 
   <div class="navbar">
     <div class="navbar-inner">
       <div class="container">
@@ -36,7 +36,7 @@
       <router-view></router-view>
   </div>
   <footer_></footer_>  
-</div>
+
 
 
 </template>
@@ -96,8 +96,22 @@
     width: 100%;
     border-radius: 0px!important;
 }
-.navbar {
-
+.navbar .brand {
+    width: 160px;
+    /*padding: 3px 20px;*/
+    height: 34px;
 }
-
+.navbar-search {
+    margin-bottom: 0;
+       width: 233px;
+    /*padding: 3px 20px;*/
+    height: 28px; 
+}
+form {
+    margin: 0 0 20px;
+}
+#q{
+    width: 233px;
+    height: 26px;  
+}
 </style>

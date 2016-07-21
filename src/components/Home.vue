@@ -1,7 +1,7 @@
 <template>
  <div class="container" id="content">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-9">
         <div class="col-md-12 topic-header">
           <a href="/?tab=all" class="topic-tab current-tab">全部</a>
           <a href="/?tab=good" class="topic-tab ">精华</a>
@@ -10,23 +10,14 @@
           <a href="/?tab=job" class="topic-tab ">招聘</a>
         </div>
         <topic-list class="col-md-12"></topic-list>
-        <div class="pagination" current_page="1" class="col-md-12">
-          <ul>
-            <li class="disabled"><a>«</a></li>
-            <li class="disabled active"><a>1</a></li>
-            <li><a href="/?tab=all&amp;page=2">2</a></li>
-            <li><a href="/?tab=all&amp;page=3">3</a></li>
-            <li><a href="/?tab=all&amp;page=4">4</a></li>
-            <li><a href="/?tab=all&amp;page=5">5</a></li>
-            <li><a>...</a></li>
-            <li><a href="/?tab=all&amp;page=455">»</a></li>
-          </ul>
-        </div>
+   
       </div>    
-      <div class="col-md-4">
+      <div class="col-md-3">
         <div class="row">
           <profile class="col-md-12"></profile>
-          <ad class="col-md-12"></ad>
+          <topic-create class="col-md-12"></topic-create>
+          <zero-response class="col-md-12"></zero-response>
+          <score class="col-md-12"></score>
         </div>
       </div>
     </div>        
@@ -39,13 +30,17 @@
 
 <script>
   import Profile from './Profile.vue'
-  import Ad from './Ad.vue'
+  import TopicCreate from './TopicCreate.vue'
   import TopicList from './TopicList.vue'
+  import ZeroResponse from './ZeroResponse.vue'
+  import Score from './Score.vue'
   export default {
     components: {
       'profile': Profile,
-      'ad': Ad,
-      'topic-list': TopicList
+      'topic-create': TopicCreate,
+      'topic-list': TopicList,
+      'zero-response': ZeroResponse,
+      'score': Score
     },
     data () {
       return {}
