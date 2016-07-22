@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-md-9">
         <div class="col-md-12 topic-header">
-          <a href="/?tab=all" class="topic-tab current-tab">全部</a>
-          <a href="/?tab=good" class="topic-tab ">精华</a>
+          <a href="/home/all" class="topic-tab current-tab">全部</a>
+          <a href="/home/good" class="topic-tab ">精华</a>
           <a href="/?tab=share" class="topic-tab ">分享</a>
           <a href="/?tab=ask" class="topic-tab ">问答</a>
           <a href="/?tab=job" class="topic-tab ">招聘</a>
@@ -41,6 +41,17 @@
       'topic-list': TopicList,
       'zero-response': ZeroResponse,
       'score': Score
+    },
+    route: {
+      data: function (transition) {
+        console.log('tab:' + this.$route.params.tab)
+        transition.next({
+          items: [
+            {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
+            {message: 'msg2'}
+          ]
+        })
+      }
     },
     data () {
       return {}

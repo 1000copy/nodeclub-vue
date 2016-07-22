@@ -18,7 +18,7 @@ router.map({
   '/hello': {
     component: Hello
   },
-  '/home': {
+  '/home/:tab': {
     component: Home
   },
   '/time-entries': {
@@ -33,7 +33,7 @@ router.map({
 
 // Any invalid route will redirect to home
 router.redirect({
-  '*': '/home'
+  '*': '/home/all'
 })
 
 router.start(App, '#app')

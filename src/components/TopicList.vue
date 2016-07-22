@@ -56,6 +56,17 @@
 </style>
 <script>
   export default {
+    route: {
+      data: function (transition) {
+        console.log(this.$route.params.tab)
+        transition.next({
+          items: [
+            {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
+            {message: 'msg2'}
+          ]
+        })
+      }
+    },
     data () {
       return {
         items: [
