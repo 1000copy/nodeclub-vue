@@ -3,19 +3,11 @@
     <div class="row">
       <div class="col-md-9">
         <div class="col-md-12 topic-header">
-<<<<<<< HEAD
-          <a href="/home/all" class="topic-tab current-tab">全部</a>
-          <a href="/home/good" class="topic-tab ">精华</a>
+          <a v-link="{path:'/home/all'}" class="topic-tab current-tab">全部</a>
+          <a v-link="{path:'/home/good'}" class="topic-tab ">精华</a>
           <a href="/?tab=share" class="topic-tab ">分享</a>
           <a href="/?tab=ask" class="topic-tab ">问答</a>
           <a href="/?tab=job" class="topic-tab ">招聘</a>
-=======
-          <a v-link="{ path: '/home/all' ,force: true,query: {t: + new Date()}}" class="topic-tab current-tab">全部</a>
-          <a v-link="{ path: '/home/good',force: true,query: {t: + new Date()} }" class="topic-tab">精华</a>
-          <a v-link="{ path: '/home/share' }" class="topic-tab">分享</a>
-          <a v-link="{ path: '/home/ask' }" class="topic-tab">问答</a>
-          <a v-link="{ path: '/home/job' }" class="topic-tab">问答</a>
->>>>>>> 20da65e2fb3a8337d1d064d0ba158f18c3a33f55
         </div>
         <topic-list class="col-md-12"></topic-list>
    
@@ -52,7 +44,6 @@
     },
     route: {
       data: function (transition) {
-
         console.log('tab:' + this.$route.params.tab)
         transition.next({
           items: [
@@ -64,7 +55,7 @@
     },
     data () {
       // console.log(this.$route.params.tab)/
-      return {message: ''}
+      return {items: []}
     },
     events: {
       // Increment the totalTime value based on the new
