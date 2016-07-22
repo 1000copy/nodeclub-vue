@@ -6,7 +6,7 @@
         </a>
         <span class="reply_count pull-left">
         <span class="count_of_replies" title="回复数">
-        38
+        38{{tab}}
         </span>
         <span class="count_seperator">/</span>
         <span class="count_of_visits" title="点击数">
@@ -56,9 +56,10 @@
 </style>
 <script>
   export default {
+    props: ['tab'],
     route: {
       data: function (transition) {
-        console.log(this.$route.params.tab)
+        console.log('aa')
         transition.next({
           items: [
             {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
@@ -68,6 +69,7 @@
       }
     },
     data () {
+      console.log('--')
       return {
         items: [
           {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
