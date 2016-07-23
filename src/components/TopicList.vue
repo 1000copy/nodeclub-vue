@@ -6,7 +6,7 @@
         </a>
         <span class="reply_count pull-left">
         <span class="count_of_replies" title="回复数">
-        38{{tab}}
+        38
         </span>
         <span class="count_seperator">/</span>
         <span class="count_of_visits" title="点击数">
@@ -57,32 +57,47 @@
 <script>
   export default {
     props: ['tab'],
-    route: {
-      data: function (transition) {
-        console.log('aa')
-        transition.next({
-          items: [
-            {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
-            {message: 'msg2'}
-          ]
-        })
-      }
-    },
     data () {
-      console.log('--')
+      console.log('topiclist tab:' + this.tab)
       return {
         items: [
-          {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
-          {message: 'msg2'},
-          {message: 'msg2'},
-          {message: 'msg2'},
-          {message: 'msg2'},
-          {message: 'msg2'},
-          {message: 'msg2'},
-          {message: 'msg2'},
-          {message: 'msg2'}
-        ]
+            {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
+            {message: 'msg2'},
+            {message: 'msg2'},
+            {message: 'msg2'},
+            {message: 'msg2'},
+            {message: 'msg2'},
+            {message: 'msg2'},
+            {message: 'msg2'},
+            {message: 'msg2'}
+        ]}
+    },
+    route: {
+      // activate: function (transition) {
+      //   console.log('hook-example activated!')
+      //   transition.next()
+      // },
+      // deactivate: function (transition) {
+      //   console.log('hook-example deactivated!')
+      //   transition.next()
+      // }
+    },
+    watch: {
+      tab: function (value) {
+        if (value === 'good') {
+          this.$set('items', [{message: 'good'}, {message: 'msg2'}])
+        } else {
+          this.$set('items', [{message: 'all'}, {message: 'msg2'}])
+        }
       }
+    },
+    // data: function (transition) {
+    //   console.log('hook-example data!')
+    //   transition.next()
+    // },
+    canReuse: function (transition) {
+      console.log('topiclist tab:' + this.tab)
+      return false
     }
   }
 </script>

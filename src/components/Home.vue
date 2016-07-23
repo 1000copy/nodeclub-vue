@@ -42,20 +42,11 @@
       'zero-response': ZeroResponse,
       'score': Score
     },
-    // route: {
-    //   data: function (transition) {
-    //     console.log('tab:' + this.$route.params.tab)
-    //     // transition.next({
-    //     //   items: [
-    //     //     {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
-    //     //     {message: 'msg2'}
-    //     //   ]
-    //     // })
-    //   }
-    // },
-    data () {
-      // console.log(this.$route.params.tab)/
-      return {items: []}
+    route: {
+      data: function (transition) {
+        console.log('tab:' + this.$route.params.tab)
+        transition.next()
+      }
     },
     events: {
       // Increment the totalTime value based on the new
