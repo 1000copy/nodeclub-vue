@@ -3,13 +3,11 @@
     <div class="row">
       <div class="col-md-9">
         <div class="col-md-12 topic-header">
-          <a v-link="{path:'/home/all'}" class="topic-tab current-tab">全部</a>
-          <a v-link="{path:'/home/good'}" class="topic-tab ">精华</a>
-          <a href="/?tab=share" class="topic-tab ">分享</a>
-          <a href="/?tab=ask" class="topic-tab ">问答</a>
-          <a href="/?tab=job" class="topic-tab ">招聘</a>
+          <a v-link="{path:'/home/all'}" class="hometab topic-tab current-tab">全部</a>
+          <a v-link="{path:'/home/good'}" class="hometab topic-tab ">精华</a>
+          <a v-link="{path:'/home/share'}"class="hometab topic-tab ">分享</a>
         </div>
-        <topic-list class="col-md-12" :tab="$route.params.tab"></topic-list>
+        <topic-list class="col-md-12"></topic-list>
    
       </div>    
       <div class="col-md-3">
@@ -44,7 +42,16 @@
     },
     route: {
       data: function (transition) {
-        console.log('tab:' + this.$route.params.tab)
+        var arr = ['all', 'good', 'share']
+        var ki = arr.indexOf(this.$route.params.tab)
+        var els = document.querySelectorAll('.hometab')
+        for (var i = 0; i < els.length; i++) {
+          els[i].classList.remove('current-tab')
+          if (i === ki) {
+            els[i].classList.add('current-tab')
+          }
+        }
+        this.$broadcast('tab-change', this.$route.params.tab)
         transition.next()
       }
     },

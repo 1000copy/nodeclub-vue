@@ -58,46 +58,20 @@
   export default {
     props: ['tab'],
     data () {
-      console.log('topiclist tab:' + this.tab)
       return {
         items: [
-            {message: '中国最牛逼的程序员正在编写新的Node.js club！'},
-            {message: 'msg2'},
-            {message: 'msg2'},
-            {message: 'msg2'},
-            {message: 'msg2'},
-            {message: 'msg2'},
-            {message: 'msg2'},
-            {message: 'msg2'},
-            {message: 'msg2'}
         ]}
     },
-    route: {
-      // activate: function (transition) {
-      //   console.log('hook-example activated!')
-      //   transition.next()
-      // },
-      // deactivate: function (transition) {
-      //   console.log('hook-example deactivated!')
-      //   transition.next()
-      // }
-    },
-    watch: {
-      tab: function (value) {
+    events: {
+      'tab-change': function (value) {
         if (value === 'good') {
           this.$set('items', [{message: 'good'}, {message: 'msg2'}])
+        } else if (value === 'share') {
+          this.$set('items', [{message: 'share'}, {message: 'msg2'}])
         } else {
-          this.$set('items', [{message: 'all'}, {message: 'msg2'}])
+          this.$set('items', [{message: 'all'}, {message: '中国最牛逼的程序员正在编写新的Node.js club！'}])
         }
       }
-    },
-    // data: function (transition) {
-    //   console.log('hook-example data!')
-    //   transition.next()
-    // },
-    canReuse: function (transition) {
-      console.log('topiclist tab:' + this.tab)
-      return false
     }
   }
 </script>

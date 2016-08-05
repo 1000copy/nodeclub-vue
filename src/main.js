@@ -2,13 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import Hello from './components/Hello.vue'
 import Home from './components/Home.vue'
+import About from './components/About.vue'
 import LogTime from './components/LogTime.vue'
 import VueRouter from 'vue-router'
-import VueResource from 'vue-resource'
+// import VueResource from 'vue-resource'
 import TimeEntries from './components/TimeEntries.vue'
 // We want to apply VueResource and VueRouter
 // to our Vue instance
-Vue.use(VueResource)
+// Vue.use(VueResource)
 Vue.use(VueRouter)
 
 const router = new VueRouter()
@@ -17,6 +18,12 @@ const router = new VueRouter()
 router.map({
   '/hello': {
     component: Hello
+  },
+  '/home': {
+    component: Home
+  },
+  '/about': {
+    component: About
   },
   '/home/:tab': {
     component: Home
