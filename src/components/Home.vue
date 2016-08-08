@@ -54,17 +54,6 @@
         this.$broadcast('tab-change', this.$route.params.tab)
         transition.next()
       }
-    },
-    events: {
-      // Increment the totalTime value based on the new
-      // time entry that is dispatched up
-      timeUpdate (timeEntry) {
-        this.totalTime += parseFloat(timeEntry.totalTime)
-      },
-      // Decrement totalTime when a time entry is deleted
-      deleteTime (timeEntry) {
-        this.totalTime -= parseFloat(timeEntry.totalTime)
-      }
     }
   }
 </script>
