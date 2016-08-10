@@ -1,29 +1,19 @@
 <template>
- <div class="container" id="content">
-    <div class="row">
-      <div class="col-md-9">
-        <div class="col-md-12 topic-header">
-          <a v-link="{path:'/home/all'}" class="hometab topic-tab current-tab">全部</a>
-          <a v-link="{path:'/home/good'}" class="hometab topic-tab ">精华</a>
-          <a v-link="{path:'/home/share'}"class="hometab topic-tab ">分享</a>
-        </div>
+ <nav class="container" id="content">
+    <section class="row">
+      <section class="col-md-9">
         <topic-list class="col-md-12"></topic-list>
-   
-      </div>    
-      <div class="col-md-3">
-        <div class="row">
-          <profile class="col-md-12"></profile>
-          <topic-create class="col-md-12"></topic-create>
-          <zero-response class="col-md-12"></zero-response>
-          <score class="col-md-12"></score>
-        </div>
-      </div>
-    </div>        
-  </div>
-    <!-- <div class="row"> -->
-  <footer class="col-md-12 col-lg-12"></footer>
-    <!-- </div> -->
-</div>
+      </section>    
+      <section class="col-md-3">
+        <section class="row">
+          <profile></profile>
+          <topic-create></topic-create>
+          <zero-response></zero-response>
+          <score></score>
+        </section>
+      </section>
+    </section>
+  </nav>
 </template>
 
 <script>

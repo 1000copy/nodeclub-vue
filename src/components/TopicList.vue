@@ -1,4 +1,9 @@
 <template>
+   <div class="col-md-12 topic-header">
+      <a v-link="{path:'/home/all'}" class="hometab topic-tab current-tab">全部</a>
+      <a v-link="{path:'/home/good'}" class="hometab topic-tab ">精华</a>
+      <a v-link="{path:'/home/share'}"class="hometab topic-tab ">分享</a>
+   </div>
    <div id="topic-list">
       <div class="cell" v-for="item in items">
         <a class="user_avatar pull-left" href="/user/xeodou">
@@ -52,6 +57,10 @@
 }
 #topic-list .cell:nth-child(1) {
     border-top: none;
+}
+.topic-header{
+  margin-top: 10px;
+  margin-left: 0px;
 }
 </style>
 <script>
