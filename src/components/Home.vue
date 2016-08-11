@@ -2,7 +2,7 @@
  <nav class="container" id="content">
     <section class="row">
       <section class="col-md-9">
-        <topic-list class="col-md-12"></topic-list>
+        <topic-list></topic-list>
       </section>    
       <section class="col-md-3">
         <section class="row">
