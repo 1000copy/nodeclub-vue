@@ -40,7 +40,14 @@ module.exports = {
       }
     ],
     loaders: [
-      { test: /\.css$/, loader: 'style-loader!css-loader' },
+      { test: /\.(png|woff|woff2|eot|ttf|svg|jpe?g|gif)$/, loader: 'url-loader?limit=100000' },
+      { 
+        test: /\.css$/, 
+        include: [
+                    path.resolve(__dirname, "not_exist_path")
+                    // ""
+                ],
+        loader: 'style-loader!css-loader' },
       {
         test: /\.vue$/,
         loader: 'vue'
@@ -58,22 +65,6 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'vue-html'
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url',
-        query: {
-          limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
-        query: {
-          limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-        }
       }
     ]
   },

@@ -1,4 +1,4 @@
-// require('../static/bootstrap.min.css')
+require('bootstrap/dist/css/bootstrap.css')
 import Vue from 'vue'
 import App from './App.vue'
 import Hello from './components/Hello.vue'
